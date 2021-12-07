@@ -1,7 +1,7 @@
-gpt<-function(y,s,alpha1,alpha2,q){
-  za1<-qnorm(alpha1/2,0,1,lower.tail=F)
+gpt<-function(y,s,alpha1=0.05,alpha2=0.10,q=0.5){
+  za1<-qnorm(alpha1/2,0,1,lower.tail=FALSE)
   za1
-  za2<-qnorm(alpha2/2,0,1,lower.tail=F)
+  za2<-qnorm(alpha2/2,0,1,lower.tail=FALSE)
   za2
 
   I1<-(abs(y/s)>za1)

@@ -1,7 +1,7 @@
 Package: meta.shrinkage
 Type: Package
 Title: Meta-Analyses for Simultaneously Estimating Individual Means
-Version: 0.1.0
+Version: 0.1.1
 Author: Nanami Taketomi, Takeshi Emura
 Maintainer: Nanami Taketomi <nanamitaketomitommy@gmail.com>
 Description: Implement meta-analyses for simultaneously estimating individual means with shrinkage,
@@ -10,6 +10,6 @@ Description: Implement meta-analyses for simultaneously estimating individual me
 License: GPL-2
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2021-11-12 06:46:07 UTC; a219gm011t
+Packaged: 2021-12-07 11:18:58 UTC; a219gm011t
 Repository: CRAN
-Date/Publication: 2021-11-19 07:10:01 UTC
+Date/Publication: 2021-12-07 12:00:02 UTC
