@@ -1,2 +1,4 @@
 exportPattern("^[[:alpha:]]+")
     importFrom("stats", "qnorm")
+    importFrom("graphics", "lines", "text")
+    importFrom("stats", "cor.test", "lowess")
