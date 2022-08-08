@@ -11,7 +11,7 @@ This appliction is also described in Section 5.2 of Taketomi et al.(2021).
 
 }
 \usage{
-rml(y,x=1:length(y),id=1:length(y),decreasing=FALSE,test=FALSE)
+rml(y,x=1:length(y),id=1:length(y),decreasing=FALSE)
 }
 
 \arguments{
@@ -19,7 +19,6 @@ rml(y,x=1:length(y),id=1:length(y),decreasing=FALSE,test=FALSE)
   \item{x}{a numeric vector for a covariate that is interested in the relationship between ordered means. Default implies the serial number assigned to the dataset.}
   \item{id}{a vector for the names of studies. The elements of this vector is numeric or character.}
   \item{decreasing}{logical scalar - Whether to sort the dataset in decreasing order by x or not. If decreasing=TRUE, RML in the output is estimators under the assumption that the y is monotonically decreasing with respect to x.}
-  \item{test}{logical scalar - Whether to test for correlation between x and y, and to fit the lowess. If test=TRUE, the scatter plot of x and y and the curve fitting of lowess are described in the output.}
 }
 
 \value{
@@ -46,9 +45,6 @@ x<-c(56.4,63.0,52.0,49.0,62.1,49.5,82.0,58.0,47.9,45.0,62.0)
 #Under the assumption that y is monotonically decreasing with respect to x,
 #input decreasing=TRUE(the dataset is sorted by in decreasing order by x).
 rml(y,x,decreasing=TRUE)
-
-#If test=TRUE, we can confirm Kendall's tau and lowess plot for x and y.
-rml(y,x,decreasing=TRUE,test=TRUE)
 
 
 #If x and decreasing are default, the dataset is sorted by

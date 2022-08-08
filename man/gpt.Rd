@@ -5,27 +5,39 @@ The General Pretest(GPT) Estimator for Sparse Means
 }
 \description{
 This function is used to calculate the general pretest(GPT) estimator for individual means under sparse means.
+As an option, confidence intervals corresponding to pretest estimators can be computed.
 The methodology is described in detail in Section 3.3 of Taketomi et al. (2021).
 An example shows the application of this method to the gastric cancer data of GASTRIC group (2013) .
 }
 \usage{
-gpt(y,s,alpha1=0.05,alpha2=0.10,q=0.5)
+gpt(y,s,alpha1=0.05,alpha2=0.10,level=0.05,q=0.5,conf.int=FALSE,conf.type="pivot")
 }
 \arguments{
   \item{y}{a vector for estimates}
   \item{s}{a vector for standard errors of y}
-  \item{alpha1}{significance level for testing (0<alpha1<1)}
-  \item{alpha2}{significance level for testing(0<alpha2<1)}
+  \item{alpha1}{significance level for pretest (0<alpha1<1)}
+  \item{alpha2}{significance level for pretest (0<alpha2<1)}
+  \item{level}{a constant such that 1-level is confidence level}
   \item{q}{degrees of shrinkage(0<q<1)}
+  \item{conf.int}{an indicator whether confidence intervals for pretest estimators are in the output}
+  \item{conf.type}{an indicator that implies which type of confidence intervals for pretest estimators is in the output.
+  Default is "pivot".The other type is "wald".}
 }
 \value{
   \item{PT}{pretest(PT) estimator for y}
   \item{GPT}{general pretest(GPT) estimator for y}
+  \item{lower.pt.pivot}{Lower limits for pivoting type.}
+  \item{upper.pt.pivot}{Upper limits for pivoting type.}
+  \item{lower.pt.wald}{Lower limits for Wald type.}
+  \item{upper.pt.wald}{Upper limits for Wald type.}
+
 }
 \references{
-Taketomi N, Konno Y, Chang YT , Emura T (2021). A meta-analysis for simultaneously estimating individual means with shrinkage, isotonic regression and pretests. Axioms. 10. 267. 10.3390/axioms10040267.
+Taketomi N, Konno Y, Chang YT and Emura T (2021). A meta-analysis for simultaneously estimating individual means with shrinkage, isotonic regression and pretests. Axioms. 10. 267. 10.3390/axioms10040267.
 
 GASTRIC group (2013). Role of chemotherapy for advanced/recurrent gastric cancer: An individual-patient-data meta-analysis, European Journal of Cancer 49 (7): 1565-1577. doi:10.1016/j.ejca.2012.12.016.
+
+Taketomi N, Michimae H, Chang YT and Emura T (2022). meta.shrinkage: An R Package for Meta-Analyses for Simultaneously Estimating Individual Means. Algorithms. 15. 26.
 
 }
 \author{Nanami Taketomi, Takeshi Emura}
@@ -41,5 +53,8 @@ s<-c(0.15372,0.28686,0.33192,0.21558,0.14691,0.14416,0.24885,
 #Pretest(PT) estimator and general pretest(GPT) estimator
 gpt(y,s)
 
+#If conf.int=TRUE, confidence intervals fot PT are in the output.
+#Default is 95\% confidence interval in pivot type.
+gpt(y,s,conf.int=TRUE)
 
 }

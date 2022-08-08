@@ -5,14 +5,14 @@ js <- function(y,s) {
 
 
   #JS estimator
-  p<-(1-(G-2)/(sum(y^2/s^2)))
-  JS<-p*y
+  JS<-{1-(G-2)/(sum(y^2/s^2))}*y
   JS
 
 
   #JS+ estimator
-  q<-ifelse(p>0,p,0)
-  JS_plus<-q*y
+  p<-((1-(G-2)/(sum(y^2/s^2)))>0)
+  w<-1-(G-2)/(sum(y^2/s^2))
+  JS_plus<-w*p*y
   JS_plus
 
   #table
