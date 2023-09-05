@@ -1,12 +1,12 @@
 \name{gpt}
 \alias{gpt}
 \title{
-The General Pretest(GPT) Estimator for Sparse Means
+The General Pretest (GPT) Estimator for Sparse Means
 }
 \description{
-This function is used to calculate the general pretest(GPT) estimator for individual means under sparse means.
+This function is used to calculate the general pretest (GPT) estimator for individual means under sparse means.
 As an option, confidence intervals corresponding to pretest estimators can be computed.
-The methodology is described in detail in Section 3.3 of Taketomi et al. (2021).
+The methodology is described in detail in Section 3.3 of Taketomi et al. (2021), Section 3.4 of Taketomi et al. (2022), and Section 2 and Section 3 of Taketomi et al. (2023-).
 An example shows the application of this method to the gastric cancer data of GASTRIC group (2013) .
 }
 \usage{
@@ -35,9 +35,11 @@ gpt(y,s,alpha1=0.05,alpha2=0.10,level=0.05,q=0.5,conf.int=FALSE,conf.type="pivot
 \references{
 Taketomi N, Konno Y, Chang YT and Emura T (2021). A meta-analysis for simultaneously estimating individual means with shrinkage, isotonic regression and pretests. Axioms. 10. 267. 10.3390/axioms10040267.
 
-GASTRIC group (2013). Role of chemotherapy for advanced/recurrent gastric cancer: An individual-patient-data meta-analysis, European Journal of Cancer 49 (7): 1565-1577. doi:10.1016/j.ejca.2012.12.016.
-
 Taketomi N, Michimae H, Chang YT and Emura T (2022). meta.shrinkage: An R Package for Meta-Analyses for Simultaneously Estimating Individual Means. Algorithms. 15. 26.
+
+Taketomi N, Chang YT, Konno Y, Mori M and Emura T (2023-). Confidence interval for normal means in meta-analysis based on a pretest estimator. Under review.
+
+GASTRIC group (2013). Role of chemotherapy for advanced/recurrent gastric cancer: An individual-patient-data meta-analysis, European Journal of Cancer 49 (7): 1565-1577. doi:10.1016/j.ejca.2012.12.016.
 
 }
 \author{Nanami Taketomi, Takeshi Emura}
@@ -58,3 +60,8 @@ gpt(y,s)
 gpt(y,s,conf.int=TRUE)
 
 }
+
+\keyword{Pretest estimator}
+\keyword{Sparse means}
+\keyword{shrinkage estimator}
+\keyword{Confidence intervals for individual means}

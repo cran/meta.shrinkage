@@ -1,9 +1,9 @@
 \name{js}
 \alias{js}
-\title{James-Stein(JS) Estimator and Positive-Part JS Estimator for Means}
+\title{James-Stein (JS) Estimator and Positive-Part JS Estimator for Means}
 \description{
-This function computes the James-Stein(JS) shirinkage estimators for means.
-The detail of this estimation is described in Section 3.1 of Taketomi et al.(2021).
+This function computes the James-Stein (JS) shirinkage estimators for means.
+The detail of this estimation is described in Section 3.1 of Taketomi et al. (2021).
 An example shows the application of this method to the gastric cancer data of GASTRIC group (2013).
 }
 
@@ -38,3 +38,6 @@ s<-c(0.15372,0.28686,0.33192,0.21558,0.14691,0.14416,0.24885,
 js(y,s)
 
 }
+
+\keyword{Shrinkage estimator}
+\keyword{James-Stein (JS) estimator}

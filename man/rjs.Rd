@@ -1,14 +1,14 @@
 \name{rjs}
 \alias{rjs}
 \title{
-Restricted James-Stein(JS) Estimator Under Ordered Means
+Restricted James-Stein (JS) Estimator Under Ordered Means
 }
 \description{
-This function is used to calculate the James-Stein(JS) shrinkage estimator under ordered means.
-The calculation of this estimator includes pooled-adjacent-violators algorithm(PAVA).
-Technical details is described in Taketomi et al.(2021).
-An example shows the application to the COVID-19 data from Pranata et al.(2020).
-This appliction is also described in Section 5.2 of Taketomi et al.(2021).
+This function is used to calculate the James-Stein (JS) shrinkage estimator under ordered means.
+The calculation of this estimator includes pooled-adjacent-violators algorithm (PAVA).
+Technical details is described in Taketomi et al. (2021).
+An example shows the application to the COVID-19 data from Pranata et al. (2020).
+This appliction is also described in Section 5.2 of Taketomi et al. (2021).
 }
 \usage{
 rjs(y,s,x=1:length(y),id=1:length(y),decreasing=FALSE)
@@ -35,7 +35,7 @@ Pranata R, Lim MA, Huang I, Raharjo SB, Lukito AA (2020). Hypertension is associ
 Nanami Taketomi, Takeshi Emura
 }
 \examples{
-#Estimates from the COVID-19 data (Taketomi et al.(2021); Pranata et al.(2020))
+#Estimates from the COVID-19 data (Taketomi et al. (2021); Pranata et al. (2020))
 y<-c(0.6881,0.5933,1.1756,0.5365,0.678,0.5878,0.4637,0.5247,1.2326,2.8904,1.1378)
 
 #standard errors of estimates
@@ -57,3 +57,8 @@ rjs(y,s,x,id,decreasing=TRUE)
 
 }
 
+\keyword{Ordered means}
+\keyword{Isotonic regression}
+\keyword{James-Stein (JS) estimator}
+\keyword{Pooled-Adjacent-Violators Algorithm (PAVA)}
+\keyword{Shrinkage estimator}

@@ -4,10 +4,10 @@
 The Ordered Restricted Maximum Likelihood Estimator under Ordered Means
 }
 \description{
-This function provides the restricted maximum likelihood(RML) estimator under ordered means using Pooled-Adjacent-Violators Algorithm(PAVA).
-The technical details and examples for this estimator are described in Section 3.2 of Taketomi et al.(2021).
-An example shows the application to the COVID-19 data from Pranata et al.(2020).
-This appliction is also described in Section 5.2 of Taketomi et al.(2021).
+This function provides the restricted maximum likelihood (RML) estimator under ordered means using Pooled-Adjacent-Violators Algorithm (PAVA).
+The technical details and examples for this estimator are described in Section 3.2 of Taketomi et al. (2021).
+An example shows the application to the COVID-19 data from Pranata et al. (2020).
+This appliction is also described in Section 5.2 of Taketomi et al. (2021).
 
 }
 \usage{
@@ -35,7 +35,7 @@ Pranata R, Lim MA, Huang I, Raharjo SB, Lukito AA (2020). Hypertension is associ
 Nanami Taketomi, Takeshi Emura
 }
 \examples{
-#Estimates from the COVID-19 data (Taketomi et al.(2021); Pranata et al.(2020))
+#Estimates from the COVID-19 data (Taketomi et al. (2021); Pranata et al. (2020))
 y<-c(0.6881,0.5933,1.1756,0.5365,0.678,0.5878,0.4637,0.5247,1.2326,2.8904,1.1378)
 
 #Proportions of males of each study
@@ -62,6 +62,10 @@ rml(y)
 rml(y,decreasing=TRUE)
 
 
-
-
 }
+
+
+\keyword{Ordered means}
+\keyword{Isotonic regression}
+\keyword{Restricted maximum likelihood (RML) estimator}
+\keyword{Pooled-Adjacent-Violators Algorithm (PAVA)}
